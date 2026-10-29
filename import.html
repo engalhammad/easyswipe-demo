@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Import products · Easy Swipe</title>
+  <meta name="description" content="Check a JSON, CSV or Google Shopping feed before it goes live in Easy Swipe.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/dm-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="app-header">
+    <div class="wrap">
+      <a class="logo" href="./" aria-label="Easy Swipe home">
+        <svg viewBox="0 0 26 26" aria-hidden="true"><rect x="3.5" y="5" width="13" height="17" rx="3" fill="none" stroke="#1A1A17" stroke-width="1.5" transform="rotate(-8 10 13.5)"/><rect x="9" y="3.5" width="13" height="17" rx="3" fill="#1F6F4A" transform="rotate(8 15.5 12)"/></svg>
+        Easy Swipe
+      </a>
+      <nav class="app-tabs" aria-label="Store tools">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="import.html" aria-current="page">Import products</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap import-grid">
+    <section aria-labelledby="import-title">
+      <h1 class="h2" id="import-title">Import products</h1>
+      <p class="muted" style="margin:8px 0 24px">Paste or link your product feed. We'll check every row and tell you exactly what needs fixing before it goes live.</p>
+
+      <div class="tabs" role="tablist" aria-label="How to add your feed">
+        <button type="button" role="tab" id="tab-paste" aria-controls="pane-paste" aria-selected="true">Paste</button>
+        <button type="button" role="tab" id="tab-link" aria-controls="pane-link" aria-selected="false" tabindex="-1">Link</button>
+      </div>
+
+      <div id="pane-paste" role="tabpanel" aria-labelledby="tab-paste"><form data-form="paste" aria-label="Paste a feed">
+        <div class="form-row">
+          <label for="feed-text">Feed contents</label>
+          <textarea class="input" id="feed-text" spellcheck="false" placeholder='[{"id": "sku-1", "name": "Linen Shirt", "price": 59, "image": "https://…"}]' aria-describedby="feed-hint"></textarea>
+          <p class="hint" id="feed-hint">JSON, CSV or Google Shopping XML. We detect the format for you.</p>
+        </div>
+        <p class="field-label">Or try a sample</p>
+        <div class="samples">
+          <button class="btn btn-line btn-sm" type="button" data-sample="feeds/samples/products.csv">CSV, 10 rows</button>
+          <button class="btn btn-line btn-sm" type="button" data-sample="feeds/samples/google-shopping.xml">Google Shopping XML</button>
+          <button class="btn btn-line btn-sm" type="button" data-sample="feeds/samples/products.json">JSON</button>
+        </div>
+        <div class="form-actions"><button class="btn btn-ink" type="submit">Check feed</button></div>
+      </form></div>
+
+      <div id="pane-link" role="tabpanel" aria-labelledby="tab-link" hidden><form data-form="link" aria-label="Link to a feed">
+        <div class="form-row">
+          <label for="feed-url">Feed URL</label>
+          <input class="input" id="feed-url" type="url" inputmode="url" placeholder="https://yourstore.com/feeds/products.xml" aria-describedby="url-hint" required>
+          <p class="hint" id="url-hint">The file must be reachable from this page. Feeds on another domain need CORS enabled. If not, paste the contents instead.</p>
+        </div>
+        <div class="form-actions"><button class="btn btn-ink" type="submit">Load and check</button></div>
+      </form></div>
+    </section>
+
+    <section aria-labelledby="result-title" aria-live="polite" data-result>
+      <h2 class="sr-only" id="result-title">Results</h2>
+      <div class="empty-result">
+        <svg class="icon" aria-hidden="true"><use href="icons.svg#upload"/></svg>
+        <p>Your results will show up here.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="easy-swipe.js"></script>
+  <script src="js/import.js" defer></script>
+</body>
+</html>

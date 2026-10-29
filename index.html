@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Easy Swipe · Let shoppers swipe through your shop</title>
+  <meta name="description" content="Easy Swipe shows your products one card at a time. Swipe right to add to bag, left to skip, up to save. Add it to any store with one line of code.">
+  <meta name="theme-color" content="#FAF7F2">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/dm-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/dm-sans-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/instrument-serif-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="feeds/demo.json" as="fetch" crossorigin>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="./" aria-label="Easy Swipe home">
+        <svg viewBox="0 0 26 26" aria-hidden="true"><rect x="3.5" y="5" width="13" height="17" rx="3" fill="none" stroke="#1A1A17" stroke-width="1.5" transform="rotate(-8 10 13.5)"/><rect x="9" y="3.5" width="13" height="17" rx="3" fill="#1F6F4A" transform="rotate(8 15.5 12)"/></svg>
+        Easy Swipe
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="#how">How it works</a>
+        <a href="#demos">Demos</a>
+        <a href="#install">Install</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+      <a class="btn btn-ink btn-sm" href="#contact">Book a demo</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">For online stores</p>
+          <h1 class="display">Let shoppers <em>swipe</em> through your shop.</h1>
+          <p class="lead">Easy Swipe shows your products one card at a time. Right adds it to the bag, left skips it, up saves it for later. It goes on your site with one line of code.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-ink" href="#try" data-scroll-demo>Try it now</a>
+            <a class="btn btn-line" href="#demos">See it in your industry</a>
+          </div>
+          <ul class="facts" aria-label="Key facts">
+            <li>Works with your product feed</li>
+            <li>English and Arabic</li>
+            <li>Your checkout, untouched</li>
+          </ul>
+        </div>
+        <figure class="hero-demo" id="try">
+          <div class="hero-demo-frame" id="live-demo" aria-label="Live Easy Swipe demo"></div>
+          <figcaption>This is the real widget. Try a swipe.<span class="keys"> Or use <kbd>←</kbd> <kbd>→</kbd> and <kbd>Z</kbd> to undo.</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">How it works</p>
+          <h2 class="h2" id="how-title">Three gestures. Nothing to learn.</h2>
+          <p class="lead">People already know how to swipe. Easy Swipe turns that habit into a faster way to browse a catalogue on a phone.</p>
+        </div>
+        <ol class="steps3">
+          <li>
+            <span class="dir dir--add" aria-hidden="true"><svg class="icon"><use href="icons.svg#arrow-right"/></svg></span>
+            <h3 class="h3">Right to add</h3>
+            <p>Swipe right, or tap Add, and it goes straight into the bag. Quantities and checkout live in the bag drawer.</p>
+          </li>
+          <li>
+            <span class="dir dir--skip" aria-hidden="true"><svg class="icon"><use href="icons.svg#arrow-left"/></svg></span>
+            <h3 class="h3">Left to skip</h3>
+            <p>Not for them? It's gone and won't come back this visit. Changed their mind? Undo is always one tap away.</p>
+          </li>
+          <li>
+            <span class="dir dir--save" aria-hidden="true"><svg class="icon"><use href="icons.svg#arrow-up"/></svg></span>
+            <h3 class="h3">Up to save</h3>
+            <p>Not today, but maybe. Saved products wait in their own list and move to the bag with one tap.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="why-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Why stores use it</p>
+          <h2 class="h2" id="why-title">Built around your store, not ours.</h2>
+        </div>
+        <ul class="features">
+          <li>
+            <h3 class="h3">Your checkout stays yours</h3>
+            <p>When a shopper taps Checkout, Easy Swipe hands you the bag: items, quantities, subtotal and currency. Your existing checkout and payment provider take it from there. We never handle payments.</p>
+          </li>
+          <li>
+            <h3 class="h3">See what people actually want</h3>
+            <p>A plain dashboard shows every add, save and skip, product by product. Find the items people love, and the ones they keep passing over.</p>
+          </li>
+          <li>
+            <h3 class="h3">English and Arabic, properly</h3>
+            <p>A full right-to-left layout, Arabic product names and descriptions, and prices in SAR, AED, USD or any other currency.</p>
+          </li>
+          <li>
+            <h3 class="h3">Fits any store</h3>
+            <p>Point it at a JSON, CSV or Google Shopping feed. It runs in its own sandbox, so it never clashes with your theme, and it stays under 30&nbsp;KB.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="demos" aria-labelledby="demos-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Live demos</p>
+          <h2 class="h2" id="demos-title">See it in your industry.</h2>
+          <p class="lead">Three example stores, each with its own catalogue, currency and style. Open one on your phone for the full experience.</p>
+        </div>
+        <div class="demos">
+          <a class="demo-tile" href="stores/grocery.html">
+            <div class="shot"><img src="assets/products/g12-1.webp" alt="Strawberries in a colander" width="800" height="1000" loading="lazy" decoding="async"></div>
+            <div class="meta"><h3 class="h3">Harvest Lane Market</h3><span class="tag">Grocery · SAR</span></div>
+            <p>Weekly fresh picks, pantry basics and kitchen extras. Prices in Saudi riyal, with an Arabic version.</p>
+            <span class="go">Open the grocery demo <svg class="icon" aria-hidden="true"><use href="icons.svg#arrow-right"/></svg></span>
+          </a>
+          <a class="demo-tile" href="stores/fashion.html">
+            <div class="shot"><img src="assets/products/f03-1.webp" alt="Woman in a camel wool coat" width="800" height="1000" loading="lazy" decoding="async"></div>
+            <div class="meta"><h3 class="h3">Thread &amp; Field</h3><span class="tag">Fashion · USD</span></div>
+            <p>A small fashion and beauty label. Editorial look, sharp corners, sale prices shown clearly.</p>
+            <span class="go">Open the fashion demo <svg class="icon" aria-hidden="true"><use href="icons.svg#arrow-right"/></svg></span>
+          </a>
+          <a class="demo-tile" href="stores/electronics.html">
+            <div class="shot"><img src="assets/products/e02-1.webp" alt="Black over-ear headphones" width="800" height="1000" loading="lazy" decoding="async"></div>
+            <div class="meta"><h3 class="h3">Northgate Electronics</h3><span class="tag">Electronics · AED</span></div>
+            <p>Audio, cameras and desk gear, with specs in the details sheet. Prices in UAE dirham.</p>
+            <span class="go">Open the electronics demo <svg class="icon" aria-hidden="true"><use href="icons.svg#arrow-right"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="install" aria-labelledby="install-title">
+      <div class="wrap install">
+        <div>
+          <div class="section-head" style="margin-bottom:32px">
+            <p class="eyebrow">Install</p>
+            <h2 class="h2" id="install-title">Live on your store in an afternoon.</h2>
+          </div>
+          <ol>
+            <li><h3 class="h3">Add the script</h3><p>Paste one tag before <code>&lt;/body&gt;</code>. No framework needed.</p></li>
+            <li><h3 class="h3">Point it at your feed</h3><p>Use the product feed you already have for Google Shopping, or a JSON or CSV export.</p></li>
+            <li><h3 class="h3">Connect checkout</h3><p>Listen for one event and send the bag to your own checkout.</p></li>
+          </ol>
+        </div>
+        <div class="code-stack">
+          <pre class="code" tabindex="0" aria-label="Embed code"><button class="copy-btn" type="button" data-copy="embed">Copy</button><code id="embed"><span class="c">&lt;!-- Easy Swipe --&gt;</span>
+&lt;script src=<span class="s">"https://cdn.easyswipe.app/v1/easy-swipe.js"</span>
+        <span class="a">data-store-id</span>=<span class="s">"your-store"</span>
+        <span class="a">data-feed-url</span>=<span class="s">"/feeds/google-shopping.xml"</span>
+        <span class="a">data-currency</span>=<span class="s">"SAR"</span>&gt;&lt;/script&gt;</code></pre>
+          <pre class="code" tabindex="0" aria-label="Checkout code"><button class="copy-btn" type="button" data-copy="checkout-code">Copy</button><code id="checkout-code"><span class="c">// Easy Swipe hands you the bag. You run checkout.</span>
+window.addEventListener(<span class="s">'easyswipe:checkout'</span>, (event) =&gt; {
+  <span class="a">const</span> { items, subtotal, currency } = event.detail;
+  myStore.cart.add(items).then(() =&gt; location.assign(<span class="s">'/checkout'</span>));
+});
+
+<span class="c">// Open it from any button on your site</span>
+EasySwipe.open();</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="dash-title">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">For your team</p>
+          <h2 class="h2" id="dash-title" style="margin:12px 0 16px">Every swipe is a signal.</h2>
+          <p class="lead">A right swipe is a yes. A left swipe is a no. The dashboard adds them up, so you know what to restock, discount or drop.</p>
+          <div class="actions">
+            <a class="btn btn-ink" href="dashboard.html">Open the dashboard</a>
+            <a class="btn btn-line" href="import.html">Import your products</a>
+          </div>
+        </div>
+        <div class="metric-strip" aria-label="What the dashboard tracks">
+          <div><strong>Swipes</strong><span>Total, per day</span></div>
+          <div><strong>Add rate</strong><span>Swipes that end in the bag</span></div>
+          <div><strong>Top 5s</strong><span>Most added, saved, skipped</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="cta-band" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow" style="margin-bottom:12px">Get started</p>
+        <h2 class="display" id="contact-title">Want to see it with your own products?</h2>
+        <p class="lead" style="margin-top:16px;max-width:40ch">Send us a link to your product feed and we'll set up a private demo of your store, usually within a day.</p>
+      </div>
+      <a class="btn btn-green" href="mailto:hello@easyswipe.app?subject=Easy%20Swipe%20demo">Email hello@easyswipe.app</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Easy Swipe</span>
+      <nav aria-label="Footer">
+        <a href="stores/grocery.html">Grocery demo</a>
+        <a href="stores/fashion.html">Fashion demo</a>
+        <a href="stores/electronics.html">Electronics demo</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="import.html">Import</a>
+        <a href="CREDITS.md">Photo credits</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script defer src="easy-swipe.js" data-store-id="easy-swipe-demo" data-store-name="Sample store" data-feed-url="feeds/demo.json" data-mode="inline" data-target="#live-demo"></script>
+  <script src="js/site.js" defer></script>
+</body>
+</html>

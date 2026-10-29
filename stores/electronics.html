@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Northgate Electronics · Audio, cameras and desk gear</title>
+  <meta name="description" content="Demo electronics store using Easy Swipe. Headphones, cameras, keyboards and more, delivered across the UAE.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../fonts/dm-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/dm-sans-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/site.css">
+  <link rel="preload" href="../img/electronics-hero.webp" as="image" fetchpriority="high">
+</head>
+<body class="theme-electronics">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="demo-bar">
+    <div class="wrap">
+      <span class="label">Easy Swipe demo</span>
+      <span class="sep" aria-hidden="true">·</span>
+      <nav aria-label="Demo stores" style="display:flex;gap:8px">
+        <a href="grocery.html">Grocery</a>
+        <a href="fashion.html">Fashion</a>
+        <a href="electronics.html" aria-current="page">Electronics</a>
+      </nav>
+      <a class="push" href="../dashboard.html?store=electronics">Dashboard</a>
+      <a href="../">Back to overview</a>
+    </div>
+  </div>
+
+  <header class="store-header">
+    <div class="wrap">
+      <a class="store-logo" href="electronics.html">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="1" width="24" height="24" rx="6" fill="currentColor"/><path d="M8 18V8l10 10V8" stroke="#FAF7F2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Northgate
+      </a>
+      <div class="search" role="search"><svg class="icon" aria-hidden="true"><use href="../icons.svg#search"/></svg><span>Search headphones, cameras, chargers</span></div>
+      <nav class="store-nav" aria-label="Shop"><a href="#deals">Audio</a><a href="#deals">Cameras</a><a href="#deals">Computing</a></nav>
+      <div class="store-tools">
+        <button class="tool" type="button" aria-label="Account"><svg class="icon"><use href="../icons.svg#user"/></svg></button>
+        <button class="tool" type="button" aria-label="Open swipe shopping" data-easyswipe-open><svg class="icon"><use href="../icons.svg#bag"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="e-hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div class="inner">
+          <div class="copy">
+            <p class="eyebrow">Weekly deals</p>
+            <h1 id="hero-title">Better sound, fewer tabs.</h1>
+            <p class="muted" style="max-width:36ch">Skip the comparison spreadsheets. Swipe through this week's audio, camera and desk deals, and open Details for the full specs.</p>
+            <ul class="specs"><li>Free next-day delivery in the UAE</li><li>2-year warranty</li></ul>
+            <button class="btn btn-ink" type="button" data-easyswipe-open><svg class="icon" aria-hidden="true"><use href="../icons.svg#layers"/></svg>Swipe this week's deals</button>
+          </div>
+          <div class="pic"><img src="../img/electronics-hero.webp" alt="Black over-ear headphones on a marble surface" width="1120" height="840" fetchpriority="high"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" id="deals" aria-labelledby="deals-title">
+      <ul class="perks">
+        <li><svg class="icon" aria-hidden="true"><use href="../icons.svg#truck"/></svg>Next-day delivery</li>
+        <li><svg class="icon" aria-hidden="true"><use href="../icons.svg#shield"/></svg>2-year warranty</li>
+        <li><svg class="icon" aria-hidden="true"><use href="../icons.svg#restart"/></svg>30-day returns</li>
+        <li><svg class="icon" aria-hidden="true"><use href="../icons.svg#store"/></svg>Pick up in Dubai Mall</li>
+      </ul>
+      <div class="grid-head">
+        <h2 class="h2" id="deals-title">Top picks</h2>
+        <button class="link-arrow" type="button" data-easyswipe-open style="background:none;border:0;cursor:pointer">Swipe all deals <svg class="icon" aria-hidden="true"><use href="../icons.svg#arrow-right"/></svg></button>
+      </div>
+      <ul class="product-grid" data-product-grid data-feed="../feeds/electronics.json" data-limit="8" data-spec="true" data-ids="e02,e01,e11,e09,e04,e08,e06,e10"></ul>
+    </section>
+  </main>
+
+  <footer class="store-footer">
+    <div class="wrap">
+      <div><p class="store-logo" style="font-size:16px;margin-bottom:8px">Northgate Electronics</p><p>Audio, cameras and computing across the UAE. This is a demo store for Easy Swipe; nothing here is for sale.</p></div>
+      <div><h2>Shop</h2><ul><li>Audio</li><li>Cameras</li><li>Computing</li></ul></div>
+      <div><h2>Support</h2><ul><li>Warranty</li><li>Returns</li><li>Track order</li></ul></div>
+      <div><h2>Stores</h2><ul><li>Dubai Mall</li><li>Yas Mall</li></ul></div>
+    </div>
+  </footer>
+
+  <div class="notice" data-checkout-notice role="status" aria-live="polite"><strong></strong><p></p><button type="button">Close</button></div>
+
+  <script defer src="../easy-swipe.js" data-store-id="northgate" data-store-name="Northgate Electronics" data-feed-url="../feeds/electronics.json" data-radius="12"></script>
+  <script src="../js/site.js" defer></script>
+</body>
+</html>

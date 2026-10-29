@@ -1,0 +1,61 @@
+/*
+  Easy Swipe design tokens.
+  The widget inlines this file into its shadow root (:host); the demo pages
+  load it as a normal stylesheet (:root). These are the only colours we use.
+*/
+:root,
+:host {
+  /* Palette */
+  --es-paper: #faf7f2;      /* background */
+  --es-surface: #ffffff;    /* cards and sheets */
+  --es-ink: #1a1a17;        /* main text */
+  --es-ink-2: #6b6860;      /* secondary text */
+  --es-line: #e7e2d9;       /* hairlines and borders */
+  --es-green: #1f6f4a;      /* brand, add to bag */
+  --es-brick: #b5473a;      /* skip */
+  --es-mustard: #c68a1e;    /* save (fill only, pair with ink text) */
+
+  /* Roles */
+  --es-brand: var(--es-green);
+  --es-on-brand: var(--es-surface);
+  --es-focus: var(--es-green);
+  --es-scrim: rgb(26 26 23 / 0.36);
+
+  /* Type */
+  --es-font: "EasySwipe Sans", "EasySwipe Arabic", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --es-font-display: "EasySwipe Serif", Georgia, "Times New Roman", serif;
+  --es-t-12: 12px;
+  --es-t-14: 14px;
+  --es-t-16: 16px;
+  --es-t-20: 20px;
+  --es-t-28: 28px;
+  --es-t-44: 44px;
+
+  /* Space (4 px grid) */
+  --es-s-1: 4px;
+  --es-s-2: 8px;
+  --es-s-3: 12px;
+  --es-s-4: 16px;
+  --es-s-5: 20px;
+  --es-s-6: 24px;
+  --es-s-8: 32px;
+  --es-s-12: 48px;
+  --es-s-16: 64px;
+
+  /* Shape */
+  --es-radius-card: 16px;
+  --es-radius-panel: 20px;
+  --es-radius-control: 12px;
+  --es-radius-sm: 6px;
+  --es-hairline: 1px solid var(--es-line);
+
+  /* The swipe card is the only element with a shadow. */
+  --es-shadow-card: 0 1px 2px rgb(26 26 23 / 0.06), 0 16px 40px -18px rgb(26 26 23 / 0.28);
+
+  /* Motion */
+  --es-ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --es-ease-spring: cubic-bezier(0.3, 1.3, 0.5, 1);
+  --es-dur-fast: 160ms;
+  --es-dur: 240ms;
+  --es-dur-slow: 360ms;
+}

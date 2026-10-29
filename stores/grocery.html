@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Harvest Lane Market · Fresh groceries delivered in Riyadh</title>
+  <meta name="description" content="Demo grocery store using Easy Swipe. Fresh produce, bakery and pantry, delivered same day.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../fonts/dm-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/dm-sans-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="../img/grocery-hero-640.webp" fetchpriority="high">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/site.css">
+</head>
+<body class="theme-grocery">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="demo-bar">
+    <div class="wrap">
+      <span class="label">Easy Swipe demo</span>
+      <span class="sep" aria-hidden="true">·</span>
+      <nav aria-label="Demo stores" style="display:flex;gap:8px">
+        <a href="grocery.html" aria-current="page">Grocery</a>
+        <a href="fashion.html">Fashion</a>
+        <a href="electronics.html">Electronics</a>
+      </nav>
+      <a class="push" href="../dashboard.html?store=grocery">Dashboard</a>
+      <a href="../">Back to overview</a>
+    </div>
+  </div>
+  <p class="ship">Free delivery in Riyadh on orders over SAR 150 · Same-day before 2 pm</p>
+
+  <header class="store-header">
+    <div class="wrap">
+      <a class="store-logo" href="grocery.html">
+        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="currentColor"/><path d="M8 16c3-6 9-8 12-8-1 5-4 10-10 10-1 0-1.6-.6-2-2Z" fill="#FAF7F2"/></svg>
+        Harvest Lane
+      </a>
+      <nav class="store-nav" aria-label="Shop">
+        <a href="#picks">Fruit &amp; veg</a>
+        <a href="#picks">Bakery</a>
+        <a href="#picks">Dairy &amp; eggs</a>
+        <a href="#picks">Pantry</a>
+        <a href="#picks">Kitchen</a>
+      </nav>
+      <div class="store-tools">
+        <button class="tool" type="button" aria-label="Search"><svg class="icon"><use href="../icons.svg#search"/></svg></button>
+        <button class="tool" type="button" aria-label="Account"><svg class="icon"><use href="../icons.svg#user"/></svg></button>
+        <button class="tool" type="button" aria-label="Open swipe shopping" data-easyswipe-open><svg class="icon"><use href="../icons.svg#bag"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="g-hero">
+      <div class="wrap">
+        <div class="inner">
+          <div class="copy">
+            <p class="eyebrow">This week at the market</p>
+            <h1>Fresh in, picked for you.</h1>
+            <p class="muted">Swipe through this week's produce, bakery and pantry picks. Right to add, left to skip, up to save for your next shop.</p>
+            <button class="btn btn-green" type="button" data-easyswipe-open><svg class="icon" aria-hidden="true"><use href="../icons.svg#layers"/></svg>Swipe this week's picks</button>
+          </div>
+          <div class="pic"><img src="../img/grocery-hero-640.webp" alt="Sourdough loaf on a linen cloth" width="640" height="480" fetchpriority="high"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" id="picks" aria-labelledby="picks-title">
+      <div class="aisles" role="list" aria-label="Aisles">
+        <a role="listitem" href="#picks">Fruit &amp; veg</a><a role="listitem" href="#picks">Bakery</a><a role="listitem" href="#picks">Dairy &amp; eggs</a><a role="listitem" href="#picks">Pantry</a><a role="listitem" href="#picks">Kitchen</a><a role="listitem" href="#picks">Bath &amp; body</a>
+      </div>
+      <div class="grid-head">
+        <h2 class="h2" id="picks-title">Popular this week</h2>
+        <button class="link-arrow" type="button" data-easyswipe-open style="background:none;border:0;cursor:pointer">Swipe all <svg class="icon" aria-hidden="true"><use href="../icons.svg#arrow-right"/></svg></button>
+      </div>
+      <ul class="product-grid" data-product-grid data-feed="../feeds/grocery.json" data-limit="8" data-ids="g01,g06,g02,g12,g05,g08,g03,h07"></ul>
+    </section>
+  </main>
+
+  <footer class="store-footer">
+    <div class="wrap">
+      <div><p class="store-logo" style="font-size:16px;margin-bottom:8px">Harvest Lane Market</p><p>Fresh groceries in Riyadh since 2014. This is a demo store for Easy Swipe; nothing here is for sale.</p></div>
+      <div><h2>Shop</h2><ul><li>Fruit &amp; veg</li><li>Bakery</li><li>Pantry</li></ul></div>
+      <div><h2>Help</h2><ul><li>Delivery areas</li><li>Returns</li><li>Contact</li></ul></div>
+      <div><h2>Hours</h2><ul><li>Daily 7 am – 11 pm</li></ul></div>
+    </div>
+  </footer>
+
+  <div class="notice" data-checkout-notice role="status" aria-live="polite"><strong></strong><p></p><button type="button">Close</button></div>
+
+  <script defer src="../easy-swipe.js" data-store-id="harvest-lane" data-store-name="Harvest Lane Market" data-feed-url="../feeds/grocery.json" data-radius="20"></script>
+  <script src="../js/site.js" defer></script>
+</body>
+</html>

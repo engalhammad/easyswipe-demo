@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dashboard · Easy Swipe</title>
+  <meta name="description" content="See what shoppers add, save and skip in Easy Swipe.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/dm-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/dm-sans-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="app-header">
+    <div class="wrap">
+      <a class="logo" href="./" aria-label="Easy Swipe home">
+        <svg viewBox="0 0 26 26" aria-hidden="true"><rect x="3.5" y="5" width="13" height="17" rx="3" fill="none" stroke="#1A1A17" stroke-width="1.5" transform="rotate(-8 10 13.5)"/><rect x="9" y="3.5" width="13" height="17" rx="3" fill="#1F6F4A" transform="rotate(8 15.5 12)"/></svg>
+        Easy Swipe
+      </a>
+      <nav class="app-tabs" aria-label="Store tools">
+        <a href="dashboard.html" aria-current="page">Dashboard</a>
+        <a href="import.html">Import products</a>
+      </nav>
+      <div class="right">
+        <label class="sr-only" for="store">Store</label>
+        <span class="select">
+          <select id="store">
+            <option value="grocery">Harvest Lane Market</option>
+            <option value="fashion">Thread &amp; Field</option>
+            <option value="electronics">Northgate Electronics</option>
+            <option value="demo">Sample store (landing page)</option>
+          </select>
+          <svg class="icon" aria-hidden="true"><use href="icons.svg#chevron-down"/></svg>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="dash wrap" aria-busy="true">
+    <div class="dash-title">
+      <div>
+        <h1 class="h2" id="dash-heading">Swipe activity</h1>
+        <p>Last 14 days · <span data-store-name></span></p>
+      </div>
+      <a class="btn btn-line btn-sm" data-store-link href="stores/grocery.html">Open this store <svg class="icon" aria-hidden="true"><use href="icons.svg#external-link"/></svg></a>
+    </div>
+
+    <section class="kpis" aria-label="Key numbers" data-kpis><div class="kpi kpi--hero"><span class="label">Total swipes</span><span class="value">–</span><span class="sub">&nbsp;</span></div><div class="kpi"><span class="label">Add-to-bag rate</span><span class="value">–</span><span class="sub">&nbsp;</span></div><div class="kpi"><span class="label">Added to bag</span><span class="value">–</span><span class="sub">&nbsp;</span></div><div class="kpi"><span class="label">Saved for later</span><span class="value">–</span><span class="sub">&nbsp;</span></div><div class="kpi"><span class="label">Checkouts started</span><span class="value">–</span><span class="sub">&nbsp;</span></div></section>
+
+    <div class="panels">
+      <section class="panel" aria-labelledby="split-title">
+        <div class="panel-head">
+          <h2 class="h3" id="split-title">Swipe split</h2>
+          <p>How shoppers answer each card</p>
+        </div>
+        <div data-split></div>
+      </section>
+      <section class="panel" aria-labelledby="daily-title">
+        <div class="panel-head">
+          <h2 class="h3" id="daily-title">Swipes per day</h2>
+          <div class="legend" aria-hidden="true"><span><i class="sw-add"></i>Added</span><span><i class="sw-save"></i>Saved</span><span><i class="sw-skip"></i>Skipped</span></div>
+        </div>
+        <div class="chart" data-daily></div>
+        <details style="margin-top:16px">
+          <summary class="small" style="cursor:pointer;min-height:44px;display:inline-flex;align-items:center">Show the numbers</summary>
+          <div class="table-wrap"><table class="data" data-daily-table style="min-width:420px"></table></div>
+        </details>
+      </section>
+    </div>
+
+    <div class="rank3">
+      <section aria-labelledby="added-title"><h2 class="h3" id="added-title">Most added</h2><p class="small muted">Right swipes and Add taps</p><ol class="rank-list" data-rank="add"></ol></section>
+      <section aria-labelledby="saved-title"><h2 class="h3" id="saved-title">Most saved</h2><p class="small muted">Up swipes and Save taps</p><ol class="rank-list" data-rank="save"></ol></section>
+      <section aria-labelledby="skipped-title"><h2 class="h3" id="skipped-title">Most skipped</h2><p class="small muted">Left swipes and Skip taps</p><ol class="rank-list" data-rank="skip"></ol></section>
+    </div>
+
+    <section class="panel" aria-labelledby="all-title" style="border-bottom:0">
+      <div class="panel-head">
+        <h2 class="h3" id="all-title">All products</h2>
+        <p data-product-count></p>
+      </div>
+      <div class="table-wrap"><table class="data" data-products></table></div>
+      <div class="data-note">
+        <p>Includes sample data so the demo isn't empty. Your own swipes in the demo stores are added on top and stay on this device.</p>
+        <p><button class="btn btn-line btn-sm" type="button" data-reset>Clear my swipes</button> <span role="status" data-reset-status></span></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/dashboard.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+{
+  "store": {
+    "name": "Harvest Lane Market"
+  },
+  "currency": "USD",
+  "products": [
+    {
+      "id": "g01",
+      "name": "Hass Avocados, 4 pack",
+      "brand": "Greenfield Farms",
+      "category": "groceries",
+      "price": 5.49,
+      "images": [
+        "../../assets/products/g01-1.webp",
+        "../../assets/products/g01-2.webp",
+        "../../assets/products/g01-3.webp"
+      ],
+      "description": "Creamy Hass avocados picked firm and ripened in store. Ready to eat in 1–2 days.",
+      "details": [
+        "4 medium avocados, approx. 720 g",
+        "Origin: Kenya",
+        "Store at room temperature, then chill once ripe",
+        "Rich in fibre and healthy fats"
+      ],
+      "rating": 4.6,
+      "reviewCount": 1284,
+      "badge": "bestseller"
+    },
+    {
+      "id": "g02",
+      "name": "Sourdough Country Loaf, 800 g",
+      "brand": "Old Mill Bakery",
+      "category": "groceries",
+      "price": 6.5,
+      "images": [
+        "../../assets/products/g02-1.webp",
+        "../../assets/products/g02-2.webp",
+        "../../assets/products/g02-3.webp"
+      ],
+      "description": "Slow-fermented for 36 hours with a deep crust and an open, chewy crumb. Baked every morning.",
+      "details": [
+        "800 g loaf",
+        "Wheat flour, rye, water, sea salt",
+        "Best within 3 days, freezes well",
+        "Contains gluten"
+      ],
+      "rating": 4.8,
+      "reviewCount": 642,
+      "badge": "new"
+    },
+    {
+      "id": "g03",
+      "name": "Free-Range Eggs, 12 pack",
+      "brand": "Hillcrest Farm",
+      "category": "groceries",
+      "price": 4.99,
+      "images": [
+        "../../assets/products/g03-1.webp",
+        "../../assets/products/g03-2.webp",
+        "../../assets/products/g03-3.webp"
+      ],
+      "description": "Large brown eggs from hens with daily outdoor access. Rich yolks, great for baking.",
+      "details": [
+        "12 large eggs",
+        "Free-range, grain-fed hens",
+        "Keep refrigerated",
+        "Recyclable pulp carton"
+      ],
+      "rating": 4.7,
+      "reviewCount": 2210
+    },
+    {
+      "id": "g05",
+      "name": "Extra Virgin Olive Oil, 500 ml",
+      "brand": "Casa Olivar",
+      "category": "groceries",
+      "price": 11.9,
+      "originalPrice": 14,
+      "images": [
+        "../../assets/products/g05-1.webp",
+        "../../assets/products/g05-2.webp",
+        "../../assets/products/g05-3.webp"
+      ],
+      "description": "Cold-pressed from early-harvest olives. Peppery, green and fresh. For dressing and finishing.",
+      "details": [
+        "500 ml glass bottle",
+        "Single estate, Andalusia",
+        "Cold extracted, unfiltered",
+        "Store away from light"
+      ],
+      "rating": 4.8,
+      "reviewCount": 903
+    },
+    {
+      "id": "g06",
+      "name": "Medjool Dates, 400 g",
+      "brand": "Al Waha",
+      "category": "groceries",
+      "price": 8.75,
+      "images": [
+        "../../assets/products/g06-1.webp",
+        "../../assets/products/g06-2.webp",
+        "../../assets/products/g06-3.webp"
+      ],
+      "description": "Large, soft Medjool dates with a caramel sweetness. Hand-sorted and packed whole.",
+      "details": [
+        "400 g box",
+        "Whole dates, contain pits",
+        "Origin: Al-Ula",
+        "Keep cool and dry"
+      ],
+      "rating": 4.9,
+      "reviewCount": 1760,
+      "badge": "bestseller"
+    },
+    {
+      "id": "g08",
+      "name": "Ground Coffee, Medium Roast, 250 g",
+      "brand": "Northside Roasters",
+      "category": "groceries",
+      "price": 9.5,
+      "images": [
+        "../../assets/products/g08-1.webp",
+        "../../assets/products/g08-2.webp",
+        "../../assets/products/g08-3.webp"
+      ],
+      "description": "Colombian and Ethiopian beans with notes of cocoa and red fruit. Ground for filter and pour-over.",
+      "details": [
+        "250 g resealable bag",
+        "Medium roast, 100% arabica",
+        "Roasted within the last 14 days",
+        "Ground for filter brewing"
+      ],
+      "rating": 4.7,
+      "reviewCount": 1128,
+      "badge": "new"
+    },
+    {
+      "id": "g09",
+      "name": "Wildflower Honey, 340 g",
+      "brand": "Meadowbee",
+      "category": "groceries",
+      "price": 7.25,
+      "images": [
+        "../../assets/products/g09-1.webp",
+        "../../assets/products/g09-2.webp",
+        "../../assets/products/g09-3.webp"
+      ],
+      "description": "Raw, unblended honey from small apiaries. Light and floral, lovely on toast or in tea.",
+      "details": [
+        "340 g glass jar",
+        "Raw, unpasteurised",
+        "May crystallise naturally",
+        "Not suitable for children under 1"
+      ],
+      "rating": 4.8,
+      "reviewCount": 486
+    },
+    {
+      "id": "g12",
+      "name": "Fresh Strawberries, 400 g",
+      "brand": "Greenfield Farms",
+      "category": "groceries",
+      "price": 4.49,
+      "originalPrice": 5.49,
+      "images": [
+        "../../assets/products/g12-1.webp",
+        "../../assets/products/g12-2.webp",
+        "../../assets/products/g12-3.webp"
+      ],
+      "description": "Sweet, juicy strawberries picked at peak ripeness. Rinse just before eating.",
+      "details": [
+        "400 g punnet",
+        "Origin: Egypt",
+        "Keep refrigerated",
+        "Best within 2 days"
+      ],
+      "rating": 4.5,
+      "reviewCount": 867
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Widget playground · Easy Swipe</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="css/tokens.css">
+  <style>
+    body { margin: 0; background: var(--es-paper); color: var(--es-ink); font: 14px/1.5 system-ui, sans-serif; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 24px 16px; }
+    .inline-host { height: 820px; max-width: 440px; }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 12px; background: var(--es-surface); border: 1px solid var(--es-line); padding: 12px; border-radius: 8px; }
+    button { font: inherit; min-height: 44px; padding: 0 16px; border-radius: 8px; border: 1px solid var(--es-line); background: var(--es-surface); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1 style="font-size:20px">Widget playground</h1>
+    <p>Query options: <code>mode</code>, <code>feed</code>, <code>lang</code>, <code>store</code>, <code>open=1</code>.</p>
+    <p><button type="button" id="open">Open widget</button></p>
+    <div id="inline" class="inline-host"></div>
+    <h2 style="font-size:16px">Events</h2>
+    <pre id="log" aria-live="off"></pre>
+  </div>
+  <script src="easy-swipe.js"></script>
+  <script>
+    const q = new URLSearchParams(location.search);
+    const mode = q.get('mode') === 'inline' ? 'inline' : 'modal';
+    window.__events = [];
+    for (const name of ['open', 'close', 'ready', 'add_to_cart', 'save_for_later', 'skip', 'checkout']) {
+      window.addEventListener('easyswipe:' + name, (e) => {
+        window.__events.push({ name, detail: e.detail });
+        document.getElementById('log').textContent = window.__events.map((ev) => ev.name + ' ' + JSON.stringify(ev.detail).slice(0, 160)).join('\n');
+      });
+    }
+    EasySwipe.init({
+      storeId: q.get('store') || 'playground',
+      feedUrl: q.get('feed') || 'feeds/demo.json',
+      mode,
+      target: '#inline',
+      lang: q.get('lang') || undefined,
+      fetchTimeoutMs: Number(q.get('timeout')) || 10000,
+    });
+    document.getElementById('open').addEventListener('click', () => EasySwipe.open());
+    if (mode === 'modal' && q.get('open') === '1') EasySwipe.open();
+  </script>
+</body>
+</html>

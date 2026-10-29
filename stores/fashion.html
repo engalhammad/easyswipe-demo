@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Thread &amp; Field · Linen season</title>
+  <meta name="description" content="Demo fashion store using Easy Swipe. Linen, knitwear and everyday essentials.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../fonts/instrument-serif-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/dm-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/site.css">
+</head>
+<body class="theme-fashion">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="demo-bar">
+    <div class="wrap">
+      <span class="label">Easy Swipe demo</span>
+      <span class="sep" aria-hidden="true">·</span>
+      <nav aria-label="Demo stores" style="display:flex;gap:8px">
+        <a href="grocery.html">Grocery</a>
+        <a href="fashion.html" aria-current="page">Fashion</a>
+        <a href="electronics.html">Electronics</a>
+      </nav>
+      <a class="push" href="../dashboard.html?store=fashion">Dashboard</a>
+      <a href="../">Back to overview</a>
+    </div>
+  </div>
+
+  <header class="store-header">
+    <div class="wrap">
+      <a class="store-logo" href="fashion.html">Thread &amp; Field</a>
+      <nav class="store-nav" aria-label="Shop">
+        <a href="#edit">New in</a>
+        <a href="#edit">Women</a>
+        <a href="#edit">Men</a>
+        <a href="#edit">Beauty</a>
+        <a href="#edit">Sale</a>
+      </nav>
+      <div class="store-tools">
+        <button class="tool" type="button" aria-label="Search"><svg class="icon"><use href="../icons.svg#search"/></svg></button>
+        <button class="tool" type="button" aria-label="Open swipe shopping" data-easyswipe-open><svg class="icon"><use href="../icons.svg#bag"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="f-hero" aria-labelledby="hero-title">
+      <div class="pic"><img src="../img/fashion-hero-1.webp" alt="Ecru linen shirt on a hanger" width="640" height="800" fetchpriority="high"></div>
+      <div class="copy">
+        <p class="eyebrow">Spring / Summer</p>
+        <h1 id="hero-title">Linen season is <em>here</em>.</h1>
+        <p class="muted" style="max-width:34ch">Washed linen, light knits and the white sneakers you'll wear all year. Swipe the new edit and keep what you love.</p>
+        <button class="btn btn-ink" type="button" data-easyswipe-open>Swipe the new edit</button>
+      </div>
+      <div class="pic"><img src="../img/fashion-hero-2.webp" alt="Sage linen summer dress" width="640" height="800" loading="lazy"></div>
+    </section>
+
+    <section class="f-section" id="edit" aria-labelledby="edit-title">
+      <div class="wrap">
+        <div class="grid-head">
+          <h2 id="edit-title">The edit</h2>
+          <button class="link-arrow" type="button" data-easyswipe-open style="background:none;border:0;cursor:pointer">Swipe all 24 <svg class="icon" aria-hidden="true"><use href="../icons.svg#arrow-right"/></svg></button>
+        </div>
+        <ul class="product-grid" data-product-grid data-feed="../feeds/fashion.json" data-limit="8" data-ids="f03,f02,f05,f12,f08,b05,f04,b01"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="store-footer">
+    <div class="wrap">
+      <div><p class="store-logo" style="font-size:20px;margin-bottom:8px">Thread &amp; Field</p><p>Considered clothing and skincare. This is a demo store for Easy Swipe; nothing here is for sale.</p></div>
+      <div><h2>Shop</h2><ul><li>New in</li><li>Knitwear</li><li>Beauty</li></ul></div>
+      <div><h2>Help</h2><ul><li>Sizing</li><li>Free returns</li><li>Contact</li></ul></div>
+      <div><h2>Follow</h2><ul><li>Journal</li><li>Newsletter</li></ul></div>
+    </div>
+  </footer>
+
+  <div class="notice" data-checkout-notice role="status" aria-live="polite"><strong></strong><p></p><button type="button">Close</button></div>
+
+  <script defer src="../easy-swipe.js" data-store-id="thread-and-field" data-store-name="Thread &amp; Field" data-feed-url="../feeds/fashion.json" data-radius="4"></script>
+  <script src="../js/site.js" defer></script>
+</body>
+</html>
